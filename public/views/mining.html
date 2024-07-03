@@ -1,0 +1,116 @@
+{{define "mining"}}
+<!DOCTYPE html>
+<html>
+{{template "head"}}
+
+<body class="bg-dark">
+    <div id="user-info" class="hidden section active">
+        <div class="container">
+            <div class="profile-container">
+                <div class="profile-picture">A</div>
+                <div id="user-name" class="username"></div>
+                <div class="balance-container">
+                    <div class="balance-symbol">₿</div>
+                    <div id="user-balance" class="balance-amount"></div>
+                </div>
+            </div>
+            <div id="user-duration"></div>
+            <div class="d-grid my-3">
+                <button id="start-farming-btn" class="btn btn-linear btn-medium" type="submit">Start farming</button>
+            </div>
+            <!-- <h3 id="user-name" class="light text-center my-5 py-5"></h3>
+            <h3 id="user-balance" class="light text-center my-5 py-5"></h3> -->
+            <!-- <div id="user-info-content">etoadress</div> -->
+        </div>
+    </div>
+    <div id="tasks" class="section">
+        <div class="tasks-container">
+            <h1>Tasks</h1>
+            <p>Task content goes here...</p>
+        </div>
+    </div>
+    <div id="friends" class="section">
+        <div class="friends-container">
+            <h1>Friends</h1>
+            <p>Friends content goes here...</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <button onclick="showSection('user-info')">
+            <i class="fas fa-home icon"></i>
+            Home
+        </button>
+        <button onclick="showSection('tasks')">
+            <i class="fas fa-tasks icon"></i>
+            Tasks
+        </button>
+        <button onclick="showSection('friends')">
+            <i class="fas fa-user-friends icon"></i>
+            Friends
+        </button>
+    </div>
+
+    <div id="early-adopters-form" class="hidden padding-medium pt-0">
+        <div class="container">
+            <h3 class="light text-center my-5 py-5">Early Adopter</h3>
+            <div class="col-lg-8 offset-lg-2">
+                <div id="form-container">
+                    <p class="mb-0">Enter your email to become early Adopter</p>
+                    <hr class="my-1">
+                    <form method="post" action="/api/v1/subscribe" id="form1" class="form-group flex-wrap">
+                        <div class="form-input col-lg-12 my-4">
+                            <input type="text" id="email1" name="email" placeholder="Your email address"
+                                class="form-control bg-blue-trans placeholder-color p-4">
+
+                            <div class="error-message" id="error-invalid-email">Please enter a valid email address.
+                            </div>
+                            <div class="error-message" id="error-email-registered">This email is already registered.
+                            </div>
+                            <div class="error-message" id="error-general">Something went wrong. Please try again later.
+                            </div>
+                            <label class="py-3 d-flex flex-wrap justify-content-between"></label>
+                            <div class="d-grid my-3">
+                                <button class="btn btn-linear btn-medium" type="submit">Become early Adopter</button>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="notification" class="notification">
+                        Thank you for subscribing!
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="error-container" class="hidden">
+        <p>An unexpected error occurred.</p>
+        <button id="reload-button" onclick="location.reload()">
+            <i class="fa fa-refresh" aria-hidden="true"></i>
+        </button>
+    </div>
+    <div id="spinner" class="hidden">Loading...</div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script type="text/javascript" src="/static/js/plugins.js"></script>
+    <script type="text/javascript" src="/static/js/check_early.js"></script>
+    <!-- <script type="text/javascript" src="/static/js/script.js"></script> -->
+    <script type="text/javascript">
+        function showSection(sectionId) {
+            const spinner = document.getElementById('spinner');
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            spinner.style.display = 'block';
+            setTimeout(() => {
+                document.getElementById(sectionId).classList.add('active');
+                spinner.style.display = 'none';
+            }, 1000); // Simulating a delay of 1 second for the spinner
+        }
+    </script>
+</body>
+
+</html>
+{{end}}

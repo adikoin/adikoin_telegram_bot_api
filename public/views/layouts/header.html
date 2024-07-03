@@ -1,0 +1,94 @@
+{{define "header"}}
+<header id="header">
+    <nav class="navbar navbar-expand-lg padding-small px-lg-4">
+        <div class="container-fluid ">
+
+            <div class="main-logo">
+                <a href="index.html">
+                    <img src="/static/images/main-logo.png" alt="logo">
+                </a>
+            </div>
+
+            <button class="navbar-toggler mb-0" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <iconify-icon icon="system-uicons:menu-hamburger" class="hamburger-menu"></iconify-icon>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title text-white" id="offcanvasNavbarLabel">Menu</h5>
+                    <button type="button" class="btn-close btn-close-white text-reset" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body ">
+                    <div class="main-menu text-center d-lg-flex align-items-center">
+                        <ul class="menu-list list-unstyled d-lg-flex m-0">
+                            <li class="menu-item">
+                                <a href="#" class="item-anchor active" data-effect="Home">Home</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="marketplace.html" class="item-anchor" data-effect="Blogs">Marketplace</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="creators.html" class="item-anchor" data-effect="Shop">Creators</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="collection.html" class="item-anchor" data-effect="Blogs">Collection</a>
+                            </li>
+                            <li class="menu-item dropdown">
+                                <a class="item-anchor dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                                    aria-expanded="false" href="#">Pages</a>
+                                <ul class="dropdown-menu dropdown-menu-dark">
+                                    <li><a href="about.html" class="dropdown-item fw-light">About <span
+                                                class="badge bg-secondary">Pro</span></a></li>
+                                    <li><a href="blog.html" class="dropdown-item fw-light">Blog <span
+                                                class="badge bg-secondary">Pro</span></a></li>
+                                    <li><a href="blog-single.html" class="dropdown-item fw-light">Blog-Single <span
+                                                class="badge bg-secondary">Pro</span></a></li>
+                                    <li><a href="marketplace.html" class="dropdown-item fw-light">Marketplace <span
+                                                class="badge bg-secondary">Pro</span></a></li>
+                                    <li><a href="item-detail.html" class="dropdown-item fw-light">Item Details
+                                            <span class="badge bg-secondary">Pro</span></a></li>
+                                    <li><a href="collection.html" class="dropdown-item fw-light">Collection <span
+                                                class="badge bg-secondary">Pro</span></a></li>
+                                    <li><a href="create-item.html" class="dropdown-item fw-light">Create Item <span
+                                                class="badge bg-secondary">Pro</span></a></li>
+                                    <li><a href="creators.html" class="dropdown-item fw-light">Creators <span
+                                                class="badge bg-secondary">Pro</span></a></li>
+                                    <li><a href="profile.html" class="dropdown-item fw-light">Author/Profile <span
+                                                class="badge bg-secondary">Pro</span></a></li>
+                                    <li><a href="edit-profile.html" class="dropdown-item fw-light">Edit Profile <span
+                                                class="badge bg-secondary">Pro</span></a></li>
+                                    <li><a href="wallet.html" class="dropdown-item fw-light">Wallet <span
+                                                class="badge bg-secondary">Pro</span></a></li>
+                                    <li><a href="contact.html" class="dropdown-item fw-light">Contact <span
+                                                class="badge bg-secondary">Pro</span></a></li>
+                                    <li><a href="faq.html" class="dropdown-item fw-light">FAQs <span
+                                                class="badge bg-secondary">Pro</span></a></li>
+                                    <li><a href="signin.html" class="dropdown-item fw-light">Sign-up <span
+                                                class="badge bg-secondary">Pro</span></a></li>
+                                    <li><a href="login.html" class="dropdown-item fw-light">Log-in <span
+                                                class="badge bg-secondary">Pro</span></a></li>
+                                    <li><a href="comingsoon.html" class="dropdown-item fw-light">Coming Soon <span
+                                                class="badge bg-secondary">Pro</span></a></li>
+                                    <li><a href="error.html" class="dropdown-item fw-light">Error <span
+                                                class="badge bg-secondary">Pro</span></a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item ">
+                                <a href="https://templatesjungle.gumroad.com/l/nft-marketplace-free-bootstrap-template"
+                                    class="item-anchor" target="_blank"> <b>GETPRO</b> </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="btn-wrap d-flex my-4 my-lg-0 ">
+                        <a href="login.html" class="btn btn-linear btn-medium">Log in</a>
+                        <a href="signin.html" class="btn btn-outline-linear btn-medium m-0">Sign up</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+</header>
+{{end}}
